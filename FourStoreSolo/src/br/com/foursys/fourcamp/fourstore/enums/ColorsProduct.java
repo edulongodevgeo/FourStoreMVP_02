@@ -1,4 +1,4 @@
-package br.com.fourstore.enums;
+package br.com.foursys.fourcamp.fourstore.enums;
 
 public enum ColorsProduct {
 	

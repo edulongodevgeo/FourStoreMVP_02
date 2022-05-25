@@ -1,4 +1,4 @@
-package br.com.fourcamp.fourstore.util;
+package br.com.foursys.fourcamp.fourstore.utils;
 
 public class UtilValidate {
 

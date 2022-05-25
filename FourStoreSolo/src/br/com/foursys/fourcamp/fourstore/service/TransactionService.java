@@ -2,13 +2,15 @@ package br.com.foursys.fourcamp.fourstore.service;
 
 import java.util.List;
 
+import br.com.foursys.fourcamp.fourstore.data.TransactionData;
 import br.com.foursys.fourcamp.fourstore.enums.PaymentMethod;
 import br.com.foursys.fourcamp.fourstore.model.Transaction;
 
 public class TransactionService {
 
 	ProductService productService = new ProductService();
-
+	TransactionData transactionData = new TransactionData();
+	
 	public boolean sell(Transaction transaction) {
 
 		// multiplica valor do produto pela quantidade desejada
@@ -17,8 +19,8 @@ public class TransactionService {
 		 * transaction.getProduct().getQtt());*/
 		 
 
-		System.out.println("Carregando transaï¿½ï¿½o... \n");
-		System.out.println("Informaï¿½ï¿½es das possibilidades de pagamento: \n");
+		System.out.println("Carregando transação... \n");
+		System.out.println("Informações das possibilidades de pagamento: \n");
 
 		// Cria o Object "preco" e multiplica valor do produto pela quantidade desejada
 		if (transaction.getPaymentMethod().equals(PaymentMethod.MONEY)) {
