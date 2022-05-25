@@ -10,41 +10,41 @@ public class TransactionService {
 	public boolean sell(Transaction transaction) {
 
 		// multiplica valor do produto pela quantidade desejada
-		/*
-		 * transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
-		 * transaction.getProduct().getQtt());
-		 */
+		
+		/* transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
+		 * transaction.getProduct().getQtt());*/
+		 
 
 		System.out.println("Carregando transação... \n");
 		System.out.println("Informações das possibilidades de pagamento: \n");
 
 		// Cria o Object "preco" e multiplica valor do produto pela quantidade desejada
-		if (PaymentMethod.MONEY != null) {
-			Object preco = transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
+		if (transaction.getPaymentMethod().equals(PaymentMethod.MONEY)) {
+			transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
 					* transaction.getProduct().getQtt()
 					- ((productService.getPrice(transaction.getProduct()) * transaction.getProduct().getQtt() * 0.10)));
-			System.out.println("Valor da transação por DINHEIRO: R$" + preco + ", (10% de desconto).");
+			System.out.println("Valor da transação por DINHEIRO: R$" + transaction.getPaymentValue() + ", (10% de desconto).");
 			//System.out.println();
 		}
-		if (PaymentMethod.DEBITCARD != null) {
-			Object preco = transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
+		if (transaction.getPaymentMethod().equals(PaymentMethod.DEBITCARD)) {
+			transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
 					* transaction.getProduct().getQtt()
 					- ((productService.getPrice(transaction.getProduct()) * transaction.getProduct().getQtt() * 0.05)));
-			System.out.println("Valor da transação por DÉBITO-CARD: R$" + preco + ", (5% de desconto).");
+			System.out.println("Valor da transação por DÉBITO-CARD: R$" + transaction.getPaymentValue() + ", (5% de desconto).");
 			//System.out.println();
 		}
-		if (PaymentMethod.CREDITCARD != null) {
-			Object preco = transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
+		if (transaction.getPaymentMethod().equals(PaymentMethod.CREDITCARD)) {
+			transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
 					* transaction.getProduct().getQtt()
 					+ ((productService.getPrice(transaction.getProduct()) * transaction.getProduct().getQtt() * 0.10)));
-			System.out.println("Valor da transação por CRÉDITO-CARD: R$" + preco + ", (10% de acréscimo).");
+			System.out.println("Valor da transação por CRÉDITO-CARD: R$" + transaction.getPaymentValue() + ", (10% de acréscimo).");
 			//System.out.println();
 		}
-		if (PaymentMethod.PIX != null) {
-			Object preco = transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
+		if (transaction.getPaymentMethod().equals(PaymentMethod.PIX)) {
+			transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
 					* transaction.getProduct().getQtt()
 					+ ((productService.getPrice(transaction.getProduct()) * transaction.getProduct().getQtt() * 0.05)));
-			System.out.println("Valor da transação por PIX: R$" + preco + ", (5% de acréscimo).");
+			System.out.println("Valor da transação por PIX: R$" + transaction.getPaymentValue() + ", (5% de acréscimo).");
 			//System.out.println();
 		}
 		

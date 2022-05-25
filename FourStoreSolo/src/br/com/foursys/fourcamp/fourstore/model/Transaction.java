@@ -75,7 +75,7 @@ public class Transaction {
                 + "\nMétodo de pagamento: " + paymentMethod
                 + "\n--------------------------------------"
                 + "\nDados do pagamento: " + paymentData
-               // + "\nValor pago: " + paymentValue
+                + "\nValor pago: " + paymentValue
                 + "\nCPF cliente: " + cpf;
     }
 }
