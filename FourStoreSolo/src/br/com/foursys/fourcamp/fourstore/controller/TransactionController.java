@@ -90,4 +90,9 @@ public class TransactionController {
 		return result;
 	}
 	
+	public String returnSellHistory() {
+
+		return transactionService.returnSellHistory();
+		}
+	
 }

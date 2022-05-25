@@ -53,6 +53,8 @@ public class TransactionService {
 		}
 		
 		
+		
+		
 		System.out.println("=================================");
 		System.out.println("RECIBO DE TRANSA��O");
 		
@@ -62,6 +64,7 @@ public class TransactionService {
 		} else {
 			// remove do estoque
 			if (productService.callRemove(transaction.getProduct())) {
+				transactionData.save(transaction);
 				return true;
 			} else {
 				return false;
@@ -70,7 +73,7 @@ public class TransactionService {
 
 	}
 	
-	public String returnSellHistory(Transaction transaction) {
+	public String returnSellHistory() {
 		String sellHistory = "Nenhuma venda no histórico ainda.";
 		List<Transaction> allSales = transactionData.listAll();
 

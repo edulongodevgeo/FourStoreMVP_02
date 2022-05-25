@@ -10,14 +10,19 @@ public class TransactionData {
 	private static List<Transaction> transactionList = new ArrayList<Transaction>();
 
 	public boolean save(Transaction transaction) {
-		for (Transaction item : transactionList) {
+		/*for (Transaction item : transactionList) {
 			if (!item.getIdTransaction().equals(transaction.getIdTransaction())) {
 				transactionList.add(transaction);
+				//System.out.println("Eu estou bem.");
 				return true;
+				
 			}
-		}
-
-		return false;
+			
+		}*/
+	
+		transactionList.add(transaction);
+		System.out.println("Eu estou passando mal.");
+		return true;
 	}
 
 	public List<Transaction> listAll() {

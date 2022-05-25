@@ -160,8 +160,10 @@ public class MainMenu {
 
 	}
 	
+	
 	public void userCallHistory() {
-		
+		TransactionController transactionController = new TransactionController();
+		System.out.println(transactionController.returnSellHistory());
 	}
 
 }
