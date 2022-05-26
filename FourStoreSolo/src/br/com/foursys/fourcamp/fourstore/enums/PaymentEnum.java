@@ -9,7 +9,7 @@ public enum PaymentEnum {
 	
 	private String description;
 	
-	PaymentEnum(String string) {
+	PaymentEnum(String description) {
 		this.description = description;
 	}
 
