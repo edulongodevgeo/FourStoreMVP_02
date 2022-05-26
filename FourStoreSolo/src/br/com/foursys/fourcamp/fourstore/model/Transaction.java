@@ -70,12 +70,15 @@ public class Transaction {
     }
     @Override
     public String toString() {
-        return "Transação id : " + idTransaction
-        		+ "\n--------------------------------------"
+        return 	
+        		"\nTransação id : " + idTransaction
+        		//+ "\n--------------------------------------"
                 + "\nMétodo de pagamento: " + paymentMethod
-                + "\n--------------------------------------"
+                //+ "\n--------------------------------------"
                 + "\nDados do pagamento: " + paymentData
                 + "\nValor pago: " + paymentValue
-                + "\nCPF cliente: " + cpf;
+                + "\nCPF cliente: " + cpf
+        		+ "\n===============================";
+        
     }
 }

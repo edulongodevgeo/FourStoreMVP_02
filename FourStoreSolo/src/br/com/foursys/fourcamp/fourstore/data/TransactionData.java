@@ -21,7 +21,7 @@ public class TransactionData {
 		}*/
 	
 		transactionList.add(transaction);
-		System.out.println("Eu estou passando mal.");
+		//System.out.println("");
 		return true;
 	}
 
