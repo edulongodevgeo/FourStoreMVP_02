@@ -23,16 +23,16 @@ public class MenuDepartment {
 		switch (forma) {
 		
 		case 1:
-			choice = DepartmentEnum.CLOTHING;
+			choice = DepartmentEnum.CLO;
 			break;
 		case 2:
-			choice = DepartmentEnum.SHOES;
+			choice = DepartmentEnum.SHO;
 			break;
 		case 3:
-			choice = DepartmentEnum.PERFUMERY;
+			choice = DepartmentEnum.PER;
 			break;
 		case 4:
-			choice = DepartmentEnum.ACCESSORIES;
+			choice = DepartmentEnum.ACC;
 			break;
 		
 		}

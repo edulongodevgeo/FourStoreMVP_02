@@ -22,19 +22,19 @@ public class MenuType {
 		switch (forma) {
 		
 		case 1:
-			choice = TypeProduct.SUMMER;
+			choice = TypeProduct.SU;
 			break;
 		case 2:
-			choice = TypeProduct.WINTER;
+			choice = TypeProduct.WI;
 			break;
 		case 3:
-			choice = TypeProduct.AUTUMN;
+			choice = TypeProduct.AU;
 			break;
 		case 4:
-			choice = TypeProduct.SPRING;
+			choice = TypeProduct.SP;
 			break;
 		case 5:
-			choice = TypeProduct.OTHERS;
+			choice = TypeProduct.OT;
 			break;
 		}
 		

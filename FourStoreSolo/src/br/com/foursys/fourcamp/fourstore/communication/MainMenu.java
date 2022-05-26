@@ -71,7 +71,7 @@ public class MainMenu {
 		System.out.println("Informe  a quantidade do produto:");
 		Integer qtt = sc.nextInt();
 
-		System.out.println("Informe  o tipo do produto:");
+		/*System.out.println("Informe  o tipo do produto:");
 		String type = sc.next();
 
 		System.out.println("Informe  o tamanho do produto:");
@@ -84,10 +84,10 @@ public class MainMenu {
 		String category = sc.next();
 
 		System.out.println("Informe  o departamento do produto:");
-		String department = sc.next();
+		String department = sc.next(); */
 
 		productController = new ProductController();
-		System.out.println(productController.addProduct(sku, price, qtt, type, size, color, category, department));
+		System.out.println(productController.addProduct(sku, price, qtt));
 
 	}
 

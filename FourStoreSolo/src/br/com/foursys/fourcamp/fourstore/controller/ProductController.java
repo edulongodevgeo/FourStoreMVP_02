@@ -10,23 +10,19 @@ public class ProductController {
 	
 	public String addProduct(String sku,
 							Double price, 
-							Integer qtt, 
-							String type,
-							String size,
-							String color,
-							String category,
-							String department) {
-		Product product = new Product(sku, price, qtt, type, size, color, category, department);
+							Integer qtt 
+							) {
+		Product product = new Product(sku, price, qtt);
 		if(service.callCreate(product)) {
 			result = "Cadastro realizado com sucesso."
 					+ "\n Produto SKU: "+product.getSku()
 					+ "\n Preço: "+product.getPrice()
 					+ "\n Quantidade no estoque: "+product.getQtt()
-					+ "\n Tipo: "+product.getType()
-					+ "\n Tamanho: "+product.getSize()
-					+ "\n Cor: "+product.getColor()
-					+ "\n Categoria: "+product.getCategory()
-					+ "\n Departamento: "+product.getDepartment();
+					+ "\n Tipo: "+product.getType().getDescription()
+					+ "\n Tamanho: "+product.getSize().getDescription()
+					+ "\n Cor: "+product.getColor().getDescription()
+					+ "\n Categoria: "+product.getCategory().getDescription()
+					+ "\n Departamento: "+product.getDepartment().getDescription2();
 		}else {
 			result = "Não foi possível cadastrar o produto. Produto já cadastrado.";
 		}
