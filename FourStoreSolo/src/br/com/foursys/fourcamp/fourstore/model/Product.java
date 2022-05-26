@@ -115,25 +115,27 @@ public class Product {
 	private void skuParse(String skuToParse) {
         String size, category, type, department, color;
 		
-        //CLO F SU XG0 WHI
-        
-		department = skuToParse.substring(0, 3);
-		category = skuToParse.substring(3, 4);
-        type = skuToParse.substring(4,6);
-        size = skuToParse.substring(6, 9);
-        color = skuToParse.substring(9, 12);       
-        
-        DepartmentEnum departmentEnum = DepartmentEnum.valueOf(department);
-        CategoryProduct categoryEnum = CategoryProduct.valueOf(category);
-        TypeProduct typeEnum = TypeProduct.valueOf(type);
-        Size sizeEnum = Size.valueOf(size);
-        ColorsProduct colorEnum = ColorsProduct.valueOf(color);
-              
-        this.size = sizeEnum;
-        this.category = categoryEnum;
-        this.type = typeEnum;
-        this.department = departmentEnum;
-        this.color = colorEnum;
+        try {
+        	department = skuToParse.substring(0, 3);
+    		category = skuToParse.substring(3, 4);
+            type = skuToParse.substring(4,6);
+            size = skuToParse.substring(6, 9);
+            color = skuToParse.substring(9, 12);       
+            
+            DepartmentEnum departmentEnum = DepartmentEnum.valueOf(department);
+            CategoryProduct categoryEnum = CategoryProduct.valueOf(category);
+            TypeProduct typeEnum = TypeProduct.valueOf(type);
+            Size sizeEnum = Size.valueOf(size);
+            ColorsProduct colorEnum = ColorsProduct.valueOf(color);
+                  
+            this.size = sizeEnum;
+            this.category = categoryEnum;
+            this.type = typeEnum;
+            this.department = departmentEnum;
+            this.color = colorEnum;
+		} catch (Exception e) {
+			e.toString();
+		}
         
         
     }

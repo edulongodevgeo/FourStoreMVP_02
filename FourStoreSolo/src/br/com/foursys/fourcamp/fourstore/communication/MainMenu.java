@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import br.com.foursys.fourcamp.fourstore.controller.ProductController;
 import br.com.foursys.fourcamp.fourstore.controller.TransactionController;
-import br.com.foursys.fourcamp.fourstore.enums.PaymentMethod;
 
 public class MainMenu {
 	Integer opt;
@@ -47,7 +46,7 @@ public class MainMenu {
 			case 5:
 				userCallSell();
 				break;
-				
+
 			case 6:
 				userCallHistory();
 				break;
@@ -70,21 +69,6 @@ public class MainMenu {
 
 		System.out.println("Informe  a quantidade do produto:");
 		Integer qtt = sc.nextInt();
-
-		/*System.out.println("Informe  o tipo do produto:");
-		String type = sc.next();
-
-		System.out.println("Informe  o tamanho do produto:");
-		String size = sc.next();
-
-		System.out.println("Informe  a cor do produto:");
-		String color = sc.next();
-
-		System.out.println("Informe  a categoria do produto:");
-		String category = sc.next();
-
-		System.out.println("Informe  o departamento do produto:");
-		String department = sc.next(); */
 
 		productController = new ProductController();
 		System.out.println(productController.addProduct(sku, price, qtt));
@@ -121,46 +105,39 @@ public class MainMenu {
 
 	public void userCallSell() {
 		String paymentData = null;
-		
+
 		System.out.println("Informe o SKU do produto que deseja comprar: ");
 		sc.nextLine();
 		String sku = sc.nextLine();
 
 		System.out.println("Informe a quantidade que deseja comprar: ");
 		Integer qtt = sc.nextInt();
-		
-		
-		
+
 		System.out.println("Informe seu CPF ou digite 0 para continuar: ");
 		String CPF = sc.next();
-		
-		System.out.println("Informe o método de pagamento:\n"
-				+ "1- Dinheiro à vista (10% de desconto)\n"
-				+ "2- Cartão de Débito (5% de desconto)\n"
-				+ "3- Cartão de Crédito (10% de acréscimo);\n"
+
+		System.out.println("Informe o método de pagamento:\n" + "1- Dinheiro à vista (10% de desconto)\n"
+				+ "2- Cartão de Débito (5% de desconto)\n" + "3- Cartão de Crédito (10% de acréscimo);\n"
 				+ "4- Pix (5% de acréscimo)");
-		
+
 		Integer paymentMethod = sc.nextInt();
-		
-		//criar métodos para pegar cada pagamento
+
+		// criar métodos para pegar cada pagamento
 		TransactionController transactionController = new TransactionController();
-		
-		//mostra na tela pro usuário digitar dados do cartão pix etc
-		if(transactionController.getPaymentData(paymentMethod).equals("erro")) {
+
+		// mostra na tela pro usuário digitar dados do cartão pix etc
+		if (transactionController.getPaymentData(paymentMethod).equals("erro")) {
 			System.out.println("Método de pagamento inválido.");
 			return;
-		}else {
+		} else {
 			System.out.println(transactionController.getPaymentData(paymentMethod));
 			paymentData = sc.next();
 		}
-		
-		
+
 		System.out.println(transactionController.sell(sku, qtt, CPF, paymentMethod, paymentData));
-		
 
 	}
-	
-	
+
 	public void userCallHistory() {
 		TransactionController transactionController = new TransactionController();
 		System.out.println(transactionController.returnSellHistory());

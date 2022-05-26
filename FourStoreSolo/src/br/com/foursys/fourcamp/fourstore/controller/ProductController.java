@@ -8,11 +8,13 @@ public class ProductController {
 	ProductService service = new ProductService();
 	
 	
-	public String addProduct(String sku,
-							Double price, 
-							Integer qtt 
-							) {
+	public String addProduct(String sku, Double price, Integer qtt) {
 		Product product = new Product(sku, price, qtt);
+		
+		if(product.getSku().length() < 12 || product.getSku().length() > 12) {
+			return "ERRO, ESSE SKU NÃO ESTÁ NO PADRÃO DE 12 DÍGITOS";
+		}
+		
 		if(service.callCreate(product)) {
 			result = "Cadastro realizado com sucesso."
 					+ "\n Produto SKU: "+product.getSku()

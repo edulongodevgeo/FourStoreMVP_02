@@ -11,7 +11,7 @@ public class ProductService {
 	ProductData data = new ProductData();
 	
 	public boolean callCreate(Product product) {
-		List lista  = new ArrayList<Product>();
+		List<Product> lista  = new ArrayList<Product>();
 		lista = data.listAll();
 		Product produtoNew = product;
 		for (int x = 0; x < lista.size(); x++) {
@@ -43,7 +43,7 @@ public class ProductService {
 	
 	public String callListAll() {
 		String result = "";
-		List lista  = new ArrayList<Product>();
+		List<Product> lista  = new ArrayList<Product>();
 		lista = data.listAll();
 		if(lista.size()>0) {
 			for (Object object : lista) {
@@ -57,7 +57,7 @@ public class ProductService {
 	
 	public Double getPrice(Product product) {
 		Double price = 0.0;
-		List lista  = new ArrayList<Product>();
+		List<Product> lista  = new ArrayList<Product>();
 		lista = data.listAll();
 		for (int x = 0; x < lista.size(); x++) {
 			Product produto = (Product) lista.get(x);
@@ -65,7 +65,7 @@ public class ProductService {
 				return produto.getPrice();
 			}
 		}
-		return 0.0;
+		return price;
 
 	}
 	
