@@ -27,28 +27,28 @@ public class TransactionService {
 			transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
 					* transaction.getProduct().getQtt()
 					- ((productService.getPrice(transaction.getProduct()) * transaction.getProduct().getQtt() * 0.10)));
-			System.out.println("Valor da transaï¿½ï¿½o por DINHEIRO: R$" + transaction.getPaymentValue() + ", (10% de desconto).");
+			System.out.println("Valor da transação por DINHEIRO: R$" + transaction.getPaymentValue() + ", (10% de desconto).");
 			//System.out.println();
 		}
 		if (transaction.getPaymentMethod().equals(PaymentMethod.DEBITCARD)) {
 			transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
 					* transaction.getProduct().getQtt()
 					- ((productService.getPrice(transaction.getProduct()) * transaction.getProduct().getQtt() * 0.05)));
-			System.out.println("Valor da transaï¿½ï¿½o por Dï¿½BITO-CARD: R$" + transaction.getPaymentValue() + ", (5% de desconto).");
+			System.out.println("Valor da transação por DÉBITO-CARD: R$" + transaction.getPaymentValue() + ", (5% de desconto).");
 			//System.out.println();
 		}
 		if (transaction.getPaymentMethod().equals(PaymentMethod.CREDITCARD)) {
 			transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
 					* transaction.getProduct().getQtt()
 					+ ((productService.getPrice(transaction.getProduct()) * transaction.getProduct().getQtt() * 0.10)));
-			System.out.println("Valor da transaï¿½ï¿½o por CRï¿½DITO-CARD: R$" + transaction.getPaymentValue() + ", (10% de acrï¿½scimo).");
+			System.out.println("Valor da transação por CRÉDITO-CARD: R$" + transaction.getPaymentValue() + ", (10% de acréscimo).");
 			//System.out.println();
 		}
 		if (transaction.getPaymentMethod().equals(PaymentMethod.PIX)) {
 			transaction.setPaymentValue(productService.getPrice(transaction.getProduct())
 					* transaction.getProduct().getQtt()
 					+ ((productService.getPrice(transaction.getProduct()) * transaction.getProduct().getQtt() * 0.05)));
-			System.out.println("Valor da transaï¿½ï¿½o por PIX: R$" + transaction.getPaymentValue() + ", (5% de acrï¿½scimo).");
+			System.out.println("Valor da transação por PIX: R$" + transaction.getPaymentValue() + ", (5% de acréscimo).");
 			//System.out.println();
 		}
 		
@@ -56,7 +56,7 @@ public class TransactionService {
 		
 		
 		System.out.println("=================================");
-		System.out.println("RECIBO DE TRANSAï¿½ï¿½O");
+		System.out.println("RECIBO DE TRANSAÇÃO");
 		
 		// verifica se getPrice deu certo
 		if (transaction.getPaymentValue() == 0.0) {
@@ -74,7 +74,7 @@ public class TransactionService {
 	}
 	
 	public String returnSellHistory() {
-		String sellHistory = "Nenhuma venda no histÃ³rico ainda.";
+		String sellHistory = "Nenhuma venda no histórico ainda.";
 		List<Transaction> allSales = transactionData.listAll();
 
 		if (allSales != null) {
