@@ -35,7 +35,7 @@ public class ProductController {
 		if(service.callAdd(product)) {
 			result = "Estoque ampliado com sucesso!";
 		}else {
-			result = "Operação não foi um sucesso.";
+			result = "Operação inválida. Tente novamente...";
 		}
 		return result;
 	}
