@@ -16,15 +16,19 @@ public class ProductController {
 		}
 		
 		if(service.callCreate(product)) {
-			result = "Cadastro realizado com sucesso."
-					+ "\n Produto SKU: "+product.getSku()
-					+ "\n Preço: "+product.getPrice()
-					+ "\n Quantidade no estoque: "+product.getQtt()
-					+ "\n Tipo: "+product.getType().getDescription()
-					+ "\n Tamanho: "+product.getSize().getDescription()
-					+ "\n Cor: "+product.getColor().getDescription()
-					+ "\n Categoria: "+product.getCategory().getDescription()
-					+ "\n Departamento: "+product.getDepartment().getDescription2();
+			if(product.getDepartment() != null || product.getSize() != null || product.getType() != null || product.getColor() != null || product.getCategory() != null) {
+				result = "Cadastro realizado com sucesso."
+						+ "\n Produto SKU: "+product.getSku()
+						+ "\n Preço: "+product.getPrice()
+						+ "\n Quantidade no estoque: "+product.getQtt()
+						+ "\n Tipo: "+product.getType().getDescription()
+						+ "\n Tamanho: "+product.getSize().getDescription()
+						+ "\n Cor: "+product.getColor().getDescription()
+						+ "\n Categoria: "+product.getCategory().getDescription()
+						+ "\n Departamento: "+product.getDepartment().getDescription2();
+			} else {
+				result = "ERRO, ESSE SKU NÃO FOI POSSIVEL CADASTRAR";
+			}
 		}else {
 			result = "Não foi possível cadastrar o produto. Produto já cadastrado.";
 		}
