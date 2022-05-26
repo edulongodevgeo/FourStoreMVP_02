@@ -2,10 +2,10 @@ package br.com.foursys.fourcamp.fourstore.enums;
 
 public enum DepartmentEnum {
 	
-	CLOTHING("vestuário"),
-	SHOES("Calçados"),
-	PERFUMERY("Perfumaria"),
-	ACCESSORIES("Acessorios");
+	CLO("vestuário"),
+	SHO("Calçados"),
+	PER("Perfumaria"),
+	ACC("Acessorios");
 
 	private String description2;
 	

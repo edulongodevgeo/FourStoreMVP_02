@@ -1,11 +1,11 @@
 package br.com.foursys.fourcamp.fourstore.enums;
 
 public enum TypeProduct {
-	SUMMER("VERÃO"),
-	WINTER("INVERNO"),
-	AUTUMN("OUTONO"),
-	SPRING("PRIMAVERA"),
-	OTHERS("OUTROS");
+	SU("VERÃO"),
+	WI("INVERNO"),
+	AU("OUTONO"),
+	SP("PRIMAVERA"),
+	OT("OUTROS");
 
 	private String description;
 

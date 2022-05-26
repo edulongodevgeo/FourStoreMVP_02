@@ -1,13 +1,13 @@
 package br.com.foursys.fourcamp.fourstore.enums;
 
 public enum Size {
-	RN("Rescem Nascido"), 
-	PP("Extra Pequeno"), 
-	P("Pequeno"), 
-	M("Médio"), 
-	G("Grande"), 
-	GG("GG"), 
-	XG("Extra Grande"),
+	RN0("Rescem Nascido"), 
+	PP0("Extra Pequeno"), 
+	P00("Pequeno"), 
+	M00("Médio"), 
+	G00("Grande"), 
+	GG0("GG"), 
+	XG0("Extra Grande"),
 	XXG("Extra Extra Grande");
 
 	private String description;

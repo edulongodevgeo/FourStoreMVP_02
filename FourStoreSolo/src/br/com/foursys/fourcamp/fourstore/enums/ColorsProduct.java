@@ -2,14 +2,14 @@ package br.com.foursys.fourcamp.fourstore.enums;
 
 public enum ColorsProduct {
 	
-	BLUE("azul"),
+	BLU("azul"),
 	RED("vermelho"),
-	GREEN("verde"),
-	WHITE("branco"),
-	BLACK("preto"),
-	YELLOW("amarelo"),
-	BROWN("marron"),
-	GRAY("cinza");
+	GRE("verde"),
+	WHI("branco"),
+	BLA("preto"),
+	YEL("amarelo"),
+	BRO("marron"),
+	GRA("cinza");
 	
 	private String description;
 

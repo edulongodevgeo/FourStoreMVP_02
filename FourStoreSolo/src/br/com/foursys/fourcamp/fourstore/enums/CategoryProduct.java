@@ -2,10 +2,10 @@ package br.com.foursys.fourcamp.fourstore.enums;
 
 public enum CategoryProduct {
 	
-	MALE("MS - Masculino"),
-	FEMININE("FM - Feminino"),
-	BABY("BB - Baby"),
-	OTHERS("OT - Outros");
+	M("MS - Masculino"),
+	F("FM - Feminino"),
+	B("BB - Baby"),
+	O("OT - Outros");
 	
 	
 	private String description;
