@@ -31,6 +31,7 @@ Projeto destinado ao FourCamp (bootcamp) da Foursys, com intuito do desenvolvime
 
 ## Documentação
 
-[Documentação](https://link-da-documentação)
+[Documentação](https://github.com/edulongodevgeo/FourStoreMVP_02/blob/main/Manual%20do%20usu%C3%A1rio%20-%20Fourstore.pdf)
+
 
 
